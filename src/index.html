@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body class="grid min-h-screen p-2 bg-light-grayish-blue place-content-center">
+    <main class="grid md:grid-cols-[285px_minmax(300px,_445px)] md:max-w-3xl rounded-lg shadow-lg shadow-grayish-blue/40 max-w-[320px]" id="main-card">
+
+        <div class="img-box h-[180px] md:h-full overflow-hidden rounded-t-lg md:rounded-tr-none md:rounded-bl-lg">
+          <img src="../images/drawers.jpg" alt="" class="object-cover object-left w-full h-full transition-all duration-500 ease-linear" id="main-banner">
+        </div>
+    
+    
+        <div class="pt-8 pb-5 overflow-hidden bg-white rounded-b-lg md:py-8 md:px-10 main-content px-7 md:rounded-tr-lg md:overflow-visible">
+            <h2 class="mb-3 font-bold md:text-xl text-dark-grayish-blue">Shift the overall look and feel by adding these wonderful
+              touches to furniture in your home</h2>
+    
+          <p class="text-[13px] md:mb-7 text-dark-blue leading-5 font-medium tracking-wide mb-6">Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
+
+                 <!--share option mobile  -->
+ <div class="absolute z-10 py-4 bg-dark-grayish-blue px-7 share-option-mobile ">
+  <div class="flex items-center justify-between gap-x-3">
+    <span class="text-xs tracking-[6px] font-light uppercase text-light-grayish-blue">Share</span>
+<div class="flex items-center mr-auto gap-x-4">
+    <a href="#">
+      <img src="../images/icon-facebook.svg" alt="">
+    </a>
+    <a href="#">
+     <img src="../images/icon-twitter.svg" alt="">
+    </a>
+    <a href="#">
+     <img src="../images/icon-pinterest.svg" alt="">
+    </a>
+    </div>
+    <button class="p-2 rounded-full bg-dark-blue">
+      <img src="../images/icon-share.svg" alt="" style="filter: brightness(0%) invert(1);" class="share-button-mobile-inside">
+    </button>
+  </div>
+</div>
+
+<!-- end of mobile share option -->
+    
+
+ <div class="relative flex items-center justify-between text-[13px]" id="mobile-share-container">
+  <img src="../images/avatar-michelle.jpg" alt="" class="mr-4 rounded-full size-10">
+  <div class="mr-auto">
+      <p class="font-bold text-dark-grayish-blue">Michelle Appleton</p>
+    <p class="text-grayish-blue">28 Jun 2020</p>
+  </div>
+
+<button class="p-2 rounded-full share-button-mobile bg-light-grayish-blue">
+  <img src="../images/icon-share.svg" alt="" >
+</button>
+</div>
+
+            
+           
+          <div class="relative flex items-center justify-between text-[13px]" id="desktop-share-container">
+              <img src="../images/avatar-michelle.jpg" alt="" class="mr-4 rounded-full size-10">
+              <div class="mr-auto">
+                  <p class="font-bold text-dark-grayish-blue">Michelle Appleton</p>
+                <p class="text-grayish-blue">28 Jun 2020</p>
+              </div>
+
+              <div class="absolute z-10 px-7  rounded-lg -right-[6.5rem] -top-[5rem] bg-dark-grayish-blue w-[248px] py-4 share-option hidden">
+              <div class="flex items-center justify-between ">
+                <span class="text-xs tracking-[6px] font-light uppercase text-light-grayish-blue">Share</span>
+    
+                <a href="#">
+                  <img src="../images/icon-facebook.svg" alt="">
+                </a>
+                <a href="#">
+                 <img src="../images/icon-twitter.svg" alt="">
+                </a>
+                <a href="#">
+                 <img src="../images/icon-pinterest.svg" alt="">
+                </a>
+              </div>
+              <div class="triangle"></div>
+              </div>
+
+              <button class="p-3 rounded-full share-button bg-light-grayish-blue">
+                <img src="../images/icon-share.svg" alt="">
+              </button>
+            </div>
+
+
+            
+      
+          </div>
+    
+    
+      </main>
+    
+<script>
+        const shareOption = document.querySelector('.share-option');
+
+document.querySelector('.share-button').addEventListener('click', function () {
+  this.classList.toggle('active');
+  shareOption.classList.toggle('active');
+});
+
+const shareOptionMobile = document.querySelector('.share-option-mobile');
+
+document.querySelector('.share-button-mobile').addEventListener('click', function () {
+  this.classList.toggle('active');
+  shareOptionMobile.classList.toggle('active');
+});
+
+document.querySelector('.share-button-mobile-inside').addEventListener('click', function () {
+  this.classList.toggle('active');
+  shareOptionMobile.classList.toggle('active');
+});
+
+
+</script>    
+  </body>
+</html>

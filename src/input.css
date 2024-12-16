@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #main-banner:hover {
+    transform: scale(1.1);
+  }
+
+  .share-button,
+  .share-button > img {
+    transition: all 0.25s ease;
+  }
+
+  .share-button:hover,
+  .share-button-mobile:hover,
+  .share-button.active {
+    background: hsl(214, 17%, 51%);
+  }
+
+  .share-button:hover.share-button > img,
+  .share-button.active.share-button > img,
+  .share-button-mobile:hover > img {
+    filter: brightness(0%) invert(1);
+  }
+
+  .share-option.active {
+    display: block;
+  }
+
+  .triangle {
+    position: absolute;
+    border-left: solid 10px #fff;
+    border-right: solid 10px #fff;
+    border-bottom: solid 10px hsl(217, 19%, 35%);
+    height: 0;
+    width: 0;
+    bottom: -10px;
+    left: 45%;
+    transform: rotate(180deg);
+    background-color: black;
+  }
+
+  .share-option-mobile.active {
+    bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .main-content {
+      position: relative;
+      padding-inline: 0px;
+    }
+
+    #desktop-share-container {
+      display: none;
+    }
+
+    .share-option-mobile {
+      bottom: -70px;
+      left: 0;
+      right: 0;
+      border-radius: 0px;
+      transition: bottom 0.3s linear;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #mobile-share-container,
+    .share-option-mobile {
+      display: none;
+    }
+  }
+}
